@@ -2,6 +2,16 @@
 session_start();
 include('../config/db.php');
 
+// Prevent cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+
+// If already logged in → redirect
+if(isset($_SESSION['user'])){
+    header("Location: ../admin/dashboard.php");
+    exit();
+}
+
 $error = "";
 
 if(isset($_POST['login'])){
