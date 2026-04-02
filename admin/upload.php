@@ -35,23 +35,18 @@ if(isset($_POST['upload'])){
 <head>
 <title>Upload</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="d-flex">
 
-<div class="bg-dark text-white p-3 vh-100" style="width: 250px;">
-    <h4>EDMS</h4><hr>
-    <a href="dashboard.php" class="text-white d-block">Dashboard</a>
-    <a href="category.php" class="text-white d-block">Categories</a>
-    <a href="upload.php" class="text-white d-block">Upload</a>
-    <a href="document_list.php" class="text-white d-block">Documents</a>
-</div>
+<?php include('layout.php'); ?>
 
 <div class="flex-grow-1">
 
-<nav class="navbar bg-light px-4 shadow-sm">
+<nav class="navbar bg-light shadow-sm px-4">
     <h5>Upload Document</h5>
 </nav>
 
